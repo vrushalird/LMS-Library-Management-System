@@ -81,11 +81,33 @@ public class Book
         Console.WriteLine($"Below book is returned:\nTitle: {title}, Author: {author}");
     }
 
-    //method for displaying book details
+    //method for displaying book details (basic version)
     public void DisplayBookDetails()
     {
         Console.WriteLine("--------------------------------------------");
         Console.WriteLine($"Book ID: {bookId}\nTitle: {title}\nAuthor: {author}\nAvailability: {isAvailable}");
         Console.WriteLine("--------------------------------------------");
     }
+
+    //overloaded method for displaying book details with a custom messgae
+    public void DisplayBookDetails(string message)
+    {
+        Console.WriteLine("--------------------------------------------");
+        Console.WriteLine(message);
+        Console.WriteLine($"Book ID: {bookId}\nTitle: {title}\nAuthor: {author}\nAvailability: {isAvailable}");
+        Console.WriteLine("--------------------------------------------");
+    }
+
+    //overloaded method for displaying book details with a conditional display of book's availability
+    public void DisplayBookDetails(bool showAvailability)
+    {
+        Console.WriteLine("--------------------------------------------");
+        Console.WriteLine($"Book ID: {bookId}\nTitle: {title}\nAuthor: {author}");
+        if(showAvailability)
+        {
+            Console.WriteLine($"Availability: {isAvailable}");
+        }
+        Console.WriteLine("--------------------------------------------");
+    }
+    
 }

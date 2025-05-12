@@ -27,7 +27,7 @@ The **Library Management System (LMS)** is a project designed to manage library 
 - Polymorphism is demonstrated through method overriding 
   - A method `BorrowBook()` is overridden in derived class `Premium Member` to borrow a book upto higher limits than a normal `Member` class.
 - It can be demonstrated though method overloading as well. For example:
-  - A method like `DisplayDetails()` can be overridden in derived classes to display specific details for books or members.
+  - Methods like `DisplayBookDetails()` are overloaded in `Book` class to display specific details of books.
 
 ### 5. Classes and Objects
 - The project defines multiple classes (`Book`, `Member`, `Library`, etc.) to represent real-world entities.
