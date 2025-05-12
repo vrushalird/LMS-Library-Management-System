@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vdaware\\Documents\\Personal Projects\\LMS-Library Management System\\Day 6.csproj",
-      "projectName": "Day 6",
-      "projectPath": "C:\\Users\\vdaware\\Documents\\Personal Projects\\LMS-Library Management System\\Day 6.csproj",
+      "projectUniqueName": "C:\\Users\\vdaware\\Documents\\Personal Projects\\LMS-Library Management System\\LMS.csproj",
+      "projectName": "LMS",
+      "projectPath": "C:\\Users\\vdaware\\Documents\\Personal Projects\\LMS-Library Management System\\LMS.csproj",
       "packagesPath": "C:\\Users\\vdaware\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\vdaware\\Documents\\Personal Projects\\LMS-Library Management System\\obj\\",
       "projectStyle": "PackageReference",
