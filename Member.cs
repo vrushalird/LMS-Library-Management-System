@@ -5,7 +5,7 @@ public class Member
     private string name;
     private string email;
     private string phoneNumber;
-    private List<Book> borrowedBooks;
+    protected List<Book> borrowedBooks; //changed to protected to allow access in derived class
 
     // Constructor to initialize member details
     public Member(string name, string email, string phoneNumber, List<Book> borrowedBooks)
@@ -43,7 +43,7 @@ public class Member
     }
 
     //method for borrowing a book
-    public bool BorrowBook(Book book, out bool checkBorrowLimitExceeded)
+    public virtual bool BorrowBook(Book book, out bool checkBorrowLimitExceeded) //marked as virtual to override in derived class
     {
         bool checkAvailability = true;
         checkBorrowLimitExceeded = false;

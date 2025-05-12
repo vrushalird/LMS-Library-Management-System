@@ -9,7 +9,7 @@ The **Library Management System (LMS)** is a project designed to manage library 
 
 ### 1. Encapsulation
 - Classes like `Book`, `Member`, and `Library` encapsulate their data (fields) and provide methods to interact with them.
-- Access modifiers (`private`, `public`) are used to restrict direct access to class members, ensuring data integrity.
+- Access modifiers (`private`, `public`, `protected`) are used to restrict direct access to class members, ensuring data integrity.
 
 ### 2. Abstraction
 - The project hides implementation details and exposes only the necessary functionalities through methods like:
@@ -18,13 +18,15 @@ The **Library Management System (LMS)** is a project designed to manage library 
   - `LendBook()`
 - This simplifies the interaction with complex operations.
 
-### 3. Inheritance - Not Yet Covered
-- The structure can be extended to include inheritance. For example:
-  - A `DigitalBook` class can inherit from the `Book` class to add properties like `fileSize` or `format`.
-  - A `PremiumMember` class can inherit from the `Member` class to add features like extended borrowing limits.
+### 3. Inheritance
+- A `PremiumMember` class inherits from the `Member` class to have additional features like extended borrowing limits.
+- Further extensions can be added using inheritance. For example:
+    - A `DigitalBook` class can inherit from the `Book` class to add properties like `fileSize` or `format`.
 
-### 4. Polymorphism - Not Yet Covered
-- Polymorphism is demonstrated through method overriding or overloading. For example:
+### 4. Polymorphism
+- Polymorphism is demonstrated through method overriding 
+  - A method `BorrowBook()` is overridden in derived class `Premium Member` to borrow a book upto higher limits than a normal `Member` class.
+- It can be demonstrated though method overloading as well. For example:
   - A method like `DisplayDetails()` can be overridden in derived classes to display specific details for books or members.
 
 ### 5. Classes and Objects
