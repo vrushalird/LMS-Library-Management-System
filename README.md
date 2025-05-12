@@ -24,7 +24,7 @@ The **Library Management System (LMS)** is a project designed to manage library 
     - A `DigitalBook` class can inherit from the `Book` class to add properties like `fileSize` or `format`.
 
 ### 4. Polymorphism
-- Polymorphism is demonstrated through method overriding 
+- Polymorphism is demonstrated through method overriding. 
   - A method `BorrowBook()` is overridden in derived class `Premium Member` to borrow a book upto higher limits than a normal `Member` class.
 - It can be demonstrated though method overloading as well. For example:
   - Methods like `DisplayBookDetails()` are overloaded in `Book` class to display specific details of books.
@@ -41,7 +41,8 @@ The **Library Management System (LMS)** is a project designed to manage library 
 ### 7. Relationships Between Classes
 - **Association**: The `Library` class maintains a list of `Book` and `Member` objects.
 - **Aggregation**: The `Member` class contains a list of borrowed `Book` objects.
-- **Composition**: The `LibraryManager` class uses `BooksManager` and `MembersManager` objects to manage specific functionalities.
+- **Composition**: The `LibraryManager` class uses `Library` objects as its own part. It cannot exist without a `Library` class.
+    - Similarly, `BooksManager` and `MembersManager` classes depend on `Book` and `Member` objects respectively to manage specific functionalities.
 
 ### 8. Error Handling
 - Basic error handling is implemented using conditional checks. For example:

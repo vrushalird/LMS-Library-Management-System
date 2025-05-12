@@ -1,7 +1,7 @@
 public class Library
 {
-    private List<Book> books;
-    private List<Member> members;
+    private List<Book> books; //association with Book class
+    private List<Member> members; //association with Member class
     private int totalBooks;
     private int totalMembers;
 

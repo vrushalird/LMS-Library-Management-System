@@ -53,7 +53,7 @@ public class MembersManager
         Console.WriteLine("Registering member to the Library......");
 
         Member member = new Member(name, email, phone, new List<Book>());
-        _library.RegisterMember(member);
+        _library.RegisterMember(member); //association between Library and Member
     }
 
     public void RemoveMember()

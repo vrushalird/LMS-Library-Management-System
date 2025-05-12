@@ -1,6 +1,6 @@
 public class LibraryManager
 {
-    private readonly Library _library;
+    private readonly Library _library; //composition of Library class, LibraryManager cannot exist without it
     private readonly MenuManager _menuManager;
 
     public LibraryManager(Library library)
