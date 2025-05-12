@@ -1,5 +1,6 @@
 public class Member
 {
+    private static int nextId = 1;
     private int memberId;
     private string name;
     private string email;
@@ -7,9 +8,9 @@ public class Member
     private List<Book> borrowedBooks;
 
     // Constructor to initialize member details
-    public Member(int id, string name, string email, string phoneNumber, List<Book> borrowedBooks)
+    public Member(string name, string email, string phoneNumber, List<Book> borrowedBooks)
     {
-        memberId = id;
+        memberId = nextId++;
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
@@ -19,7 +20,7 @@ public class Member
     // Default constructor
     public Member()
     {
-        memberId = 0;
+        memberId = nextId++;
         name = "Unknown";
         email = "Unknown";
         phoneNumber = "Unknown";

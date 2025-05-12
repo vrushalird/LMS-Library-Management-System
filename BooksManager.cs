@@ -9,14 +9,14 @@ public class BooksManager
         _menuManager = new MenuManager();
     }
 
-    public void ManageBooks()
+    public int ManageBooks()
     {
-        int bookOption;
+        int option;
         do
         {
-            bookOption = _menuManager.DisplayBookMenu();
+            option = _menuManager.DisplayBookMenu();
 
-            switch (bookOption)
+            switch (option)
             {
                 case 1: AddBook();
                         break;
@@ -38,15 +38,16 @@ public class BooksManager
                         Console.WriteLine("Invalid option. Please try again.");
                         break;
             }
-        }while(bookOption != 5 && bookOption != 6);
+        }while(option != 5 && option != 6);
+        return option;
     }
 
     public void AddBook()
     {
         Console.WriteLine();
         Console.WriteLine("Please enter below details to add a book:");
-        Console.Write("Book ID: ");
-        int bookId = int.Parse(Console.ReadLine());
+        //Console.Write("Book ID: ");
+        //int bookId = int.Parse(Console.ReadLine());
         Console.Write("Book Title: ");
         string title = Console.ReadLine();
         Console.Write("Author: ");
@@ -57,7 +58,7 @@ public class BooksManager
         Console.WriteLine();
         Console.WriteLine("Adding book in the Library......");
 
-        Book book = new Book(bookId, title, author, isAvailable);
+        Book book = new Book(title, author, isAvailable);
         _library.AddBook(book);
        
         //Console.WriteLine("Below book details are added:");

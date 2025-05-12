@@ -9,7 +9,7 @@ public class MembersManager
         _menumanager = new MenuManager();
     }
 
-    public void ManageMembers()
+    public int ManageMembers()
     {
         int option;
         do
@@ -34,6 +34,7 @@ public class MembersManager
                         break;
             }
         }while(option != 4 && option!= 5);
+        return option;
     }
 
     public void AddMember()
@@ -46,19 +47,19 @@ public class MembersManager
         string email = Console.ReadLine();
         Console.Write("Phone: ");
         string phone = Console.ReadLine();
-        Console.Write("Member ID: ");
-        int memberId = int.Parse(Console.ReadLine());
+        //Console.Write("Member ID: ");
+        //int memberId = int.Parse(Console.ReadLine());
 
         Console.WriteLine("Registering member to the Library......");
 
-        Member member = new Member(memberId, name, email, phone, new List<Book>());
+        Member member = new Member(name, email, phone, new List<Book>());
         _library.RegisterMember(member);
     }
 
     public void RemoveMember()
     {
         Console.WriteLine();
-        Console.WriteLine("Please enter the member ID of the member to remove: ");
+        Console.Write("Please enter the member ID of the member to remove: ");
         int memberId = int.Parse(Console.ReadLine());
 
         Console.WriteLine();

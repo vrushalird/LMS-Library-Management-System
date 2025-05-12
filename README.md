@@ -31,9 +31,9 @@ The **Library Management System (LMS)** is a project designed to manage library 
 - The project defines multiple classes (`Book`, `Member`, `Library`, etc.) to represent real-world entities.
 - Objects of these classes are created to perform operations like borrowing books or registering members.
 
-### 6. Static Members - Not Yet Covered
+### 6. Static Members
 - Static members are used to store global data. For example:
-  - A static counter in the `Book` class to generate unique IDs for each book.
+  - A static counter `nextId` in the `Book` class to generate unique IDs for each book.
 
 ### 7. Relationships Between Classes
 - **Association**: The `Library` class maintains a list of `Book` and `Member` objects.
@@ -67,4 +67,4 @@ The **Library Management System (LMS)** is a project designed to manage library 
 ## How to Run
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/vrushalird/LMS-Library-Management-System.git

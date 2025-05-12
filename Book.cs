@@ -1,14 +1,15 @@
 public class Book
 {
+    private static int nextId = 1;
     private int bookId;
     private string title;
     private string author;
     private bool isAvailable;
 
-    // Constructor to initialize book details
-    public Book(int id, string title, string author, bool isAvailable)
+    // Constructor to initialize book details with auto-generated ID
+    public Book(string title, string author, bool isAvailable)
     {
-        bookId = id;
+        bookId = nextId++;
         this.title = title;
         this.author = author;
         this.isAvailable = isAvailable;
@@ -17,7 +18,7 @@ public class Book
     // Default constructor
     public Book()
     {
-        bookId = 0;
+        bookId = nextId++;
         title = "Unknown";
         author = "Unknown";
         isAvailable = true;
