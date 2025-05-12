@@ -22,7 +22,7 @@ namespace LibraryManagement
             Console.WriteLine("============================================");
             
 
-            int option, bookOption=0, memberOption=0;
+            int option, bookOption=0, memberOption=0, libraryOption=0;
             Library library = new Library();
             MenuManager menuManager = new MenuManager();
 
@@ -57,7 +57,7 @@ namespace LibraryManagement
                             break;
                     case 3: // Library Management
                             LibraryManager libraryManager = new LibraryManager(library);
-                            libraryManager.ManageLibrary();
+                            libraryOption = libraryManager.ManageLibrary();
                             break;
                     case 4: // Exit
                             Console.WriteLine($"Exiting the system... Goodbye {GlobalVariables.Name}!");
@@ -66,7 +66,7 @@ namespace LibraryManagement
                             break;
                 }
 
-            }while(option != 4 && bookOption != 6 && memberOption != 5);   
+            }while(option != 4 && bookOption != 6 && memberOption != 5 && libraryOption!= 7);   
         }
     }
 

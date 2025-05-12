@@ -9,7 +9,7 @@ public class LibraryManager
         _menuManager = new MenuManager();
     }
 
-    public void ManageLibrary()
+    public int ManageLibrary()
     {
         int option;
         do
@@ -38,6 +38,7 @@ public class LibraryManager
                         break;
             }
         }while(option != 6 && option != 7);
+        return option;
     }
 
     public void LendBookToMember()

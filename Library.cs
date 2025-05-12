@@ -99,9 +99,20 @@ public class Library
 
         if(bookToLend != null && memberToLend != null)
         {
-            memberToLend.BorrowBook(bookToLend);
-            bookToLend.SetAvailability(false);
-            Console.WriteLine($"Book '{bookToLend.GetTitle()}' is lent to member '{memberToLend.GetName()}' from the Library");
+            bool checkBookAvailability = memberToLend.BorrowBook(bookToLend, out bool checkBorrowLimitExceeded);
+            if(checkBookAvailability && !checkBorrowLimitExceeded)
+            {
+                bookToLend.SetAvailability(false);
+                Console.WriteLine($"Book '{bookToLend.GetTitle()}' is lent to member '{memberToLend.GetName()}' from the Library");
+            }
+            else if(checkBorrowLimitExceeded)
+            {
+                Console.WriteLine("Member has reached the borrowing limit of 3 books.");
+            }
+            else
+            {
+                Console.WriteLine($"The book {bookToLend.GetTitle()} is not available for borrowing.");
+            }
         }
         else
         {

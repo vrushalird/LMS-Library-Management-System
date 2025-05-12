@@ -34,6 +34,7 @@ The **Library Management System (LMS)** is a project designed to manage library 
 ### 6. Static Members
 - Static members are used to store global data. For example:
   - A static counter `nextId` in the `Book` class to generate unique IDs for each book.
+  - A static counter `nextId` in the `Member` class to generate unique IDs for each member.
 
 ### 7. Relationships Between Classes
 - **Association**: The `Library` class maintains a list of `Book` and `Member` objects.
@@ -68,3 +69,6 @@ The **Library Management System (LMS)** is a project designed to manage library 
 1. Clone the repository:
    ```bash
    git clone https://github.com/vrushalird/LMS-Library-Management-System.git
+2. Run the solution from terminal:
+   ```bash
+   dotnet run

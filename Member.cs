@@ -43,18 +43,36 @@ public class Member
     }
 
     //method for borrowing a book
-    public void BorrowBook(Book book)
+    public bool BorrowBook(Book book, out bool checkBorrowLimitExceeded)
     {
+        bool checkAvailability = true;
+        checkBorrowLimitExceeded = false;
         if (book.GetAvailability())
         {
-            borrowedBooks.Add(book);
-            book.Borrow();
-            Console.WriteLine($"Member {name} borrowed the book: {book.GetTitle()}");
+            if(GetBorrowedBooksCount() < 3)
+            {
+                borrowedBooks.Add(book);
+                book.Borrow();
+                //Console.WriteLine($"Member {name} borrowed the book: {book.GetTitle()}");
+            }
+            else
+            {
+                checkBorrowLimitExceeded = true;
+                //Console.WriteLine("Member has reached the borrowing limit of 3 books.");
+            }
         }
         else
         {
-            Console.WriteLine($"The book {book.GetTitle()} is not available for borrowing.");
+            checkAvailability = false;
+            //Console.WriteLine($"The book {book.GetTitle()} is not available for borrowing.");
         }
+        return checkAvailability;
+    }
+
+    //helper method for getting borrowed books count
+    public int GetBorrowedBooksCount()
+    {
+        return borrowedBooks.Count;
     }
 
     //method for returning a book
